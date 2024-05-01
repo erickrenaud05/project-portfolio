@@ -1,0 +1,167 @@
+:root {
+    --titleColor: #1E0342;
+    --textColor: #0E46A3;
+    --secondaryBackgroundColor: #E1F7F5;
+    --primaryBackgroundColor: #9AC8CD;
+    /* Above is the color pallet I chose to use for my website */
+}
+
+/* setting global css */
+* {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: var(--titleColor);
+    margin: 0;
+}
+
+/* removing bullet points from all unordered list */
+ul { 
+    list-style-type: none;
+}
+/* all list items have same color and display type */
+li {
+    display: inline;
+    color: var(--textColor);
+}
+
+/* adding css to all sections of head */
+header section{
+    display: flex;   
+    align-items: center;
+    padding: 10px;
+    justify-content: space-between;
+}
+
+/* using specific section id to pick the color for the header background */
+#nameNav {
+    background-color: var(--primaryBackgroundColor);
+} 
+
+#subtitle {
+    background-color: var(--secondaryBackgroundColor);
+}
+
+/* adding my avatar */
+#subtitle img {
+    height: 120px;
+    position: relative;
+    right: 10px;
+    top: 10px;
+}
+
+/* css for the main section */
+
+main section{
+    display: flex;
+    margin: 10px;
+    padding: 10px;
+    justify-content: space-around;
+}
+
+/* arranging the section subtitles */
+section h2{
+    width: 14%;
+    text-align: end;
+    padding-right: 5px;
+    margin-right: 10px;
+    border-right: 2px solid var(--titleColor); 
+    color: var(--titleColor);
+}
+
+/* giving css to about me paragraph */
+#aboutMe p {
+    width: 100%;
+    padding-left: 10px;
+    color: var(--textColor);
+}
+
+/* making sure that the nav elements in the main have a width of 100 */
+main section nav {
+    width: 100%;
+}
+
+/* giving backgorund color to name of projects */
+#work span {
+    background-color: var(--textColor); 
+    color: var(--primaryBackgroundColor);
+}
+
+/* making grid layout for the nav menu */
+#work ul {
+    padding-left: 10px;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto;
+    height: 100%;
+    margin: auto;
+}
+
+/* setting class for all list elements in work grid */
+.workSection {
+    width: 100%;
+    height: 30vh;
+    background-position: center;
+    background-size: 120%;
+    background-repeat: no-repeat;
+    align-content: center;
+    border: 3px solid var(--textColor);
+    filter: blur(1px);
+}
+
+/* giving all the li elements there own images and or property */
+#first{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    background-image: url("images/game1.jpg");
+}
+
+#second {
+    background-image: url("images/project2.jpg");
+}
+
+#third {
+    background-image: url("images/prject3.jpg");
+}
+
+#fourth {
+    background-image: url("images/project4.jpg");
+}
+
+#fifth {
+    background-image: url("images/project5.jpg");
+} 
+
+/* adding interactivity to the li elemenets */
+.workSection:hover {
+    filter: blur(0px);
+    transform: scale(99%);
+}
+
+/* css for contact me nav bar */
+#contactMe {   
+    text-align: end;
+    align-items: center;
+    padding: 10px;
+    justify-content: space-between;
+}
+
+/* allowing for easy copy pasting of email or phone number */
+#contactMe li {
+    user-select: all;
+}
+/* body */
+
+/* fixing issues with images not filling content when under 797px of width. 
+    unfortunatly still some screen sizes the images dont fill in for the ipad section
+    works with phones and monitors however
+*/
+@media screen and (max-width: 797px) {
+    section h2 {
+        width: 30%;
+    }
+
+    .workSection {
+        background-size: 170%;
+        height: 18vh;
+    }
+  }
