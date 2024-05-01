@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Erick Renaud software engineering portfolio</title>
+    <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+    <!-- this header hold two sections, one for my name and navigation bar and one for a subtitle and avatar. -->
+    <header>
+        <section id="nameNav">
+            <h1>Erick Renaud</h1>
+            <nav>   
+                <ul>
+                    <li><a href="#aboutMe">About me</a></li>
+                    <li><a href="#work">Work</a></li>
+                    <li><a href="#contactMe">Contact Me</a></li>
+                    <li><a href="#">Resume</a></li>
+                </ul>
+            </nav>
+        </section>
+        <section id="subtitle">
+            <img src="myAvatar.png" alt="My avatar">
+            <p>Aut inveniam viat aut faciam<br>I shall either find a way or make one</p>
+        </section>
+    </header>
+    <!-- the main holds everything else in this page. It is seperated into three sections. 'aboutMe' which at the point 
+    of writing this comment has a place holder paragraph and a subtitle 'about me'. The second called 'work'
+    which currently only hold placeholder text and links. Once I have more projects, the links and background images
+    will be relavant and send you to a depolyed project. The 'contactMe' section holds my number and work email, in the future, I might
+    replace it with a form that will send an email to my work email. -->
+    <main>
+        <section id="aboutMe">
+            <h2>About Me</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi ipsum minima praesentium repellat asperiores veritatis provident nulla, alias suscipit vitae?</p>
+        </section>
+        <section id="work">
+            <h2>Work</h2>
+            <nav>
+                <ul id="workLinks">
+                    <li id="first" class="workSection" onclick="location.href='#'"><span style="background-color: #0E46A3; color: #9AC8CD;">Placeholder</span></li>
+                    <li id="second" class="workSection" onclick="location.href='#'"><span style="background-color: #0E46A3; color: #9AC8CD;">Placeholder</span></li>
+                    <li id="third" class="workSection" onclick="location.href='#'"><span style="background-color: #0E46A3; color: #9AC8CD;">Placeholder</span></li>
+                    <li id="fourth" class="workSection" onclick="location.href='#'"><span style="background-color: #0E46A3; color: #9AC8CD;">Placeholder</span></li>
+                    <li id="fifth" class="workSection" onclick="location.href='#'"><span style="background-color: #0E46A3; color: #9AC8CD;">Placeholder</span></li>
+                </ul>
+            </nav>
+        </section>
+        <section id="contactMe">
+            <h2>Contact me</h2>
+            <nav>
+                <ul>
+                    <li>343-585-6602</li>
+                    <li>erick.renaud9265@gmail.com</li>
+                </ul>
+            </nav>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
